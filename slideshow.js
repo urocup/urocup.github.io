@@ -25,14 +25,14 @@ var imgs = [' ./static/img/cast-1.jpg',
 
 var hrefs = [];
 var nextIndex = 0;
-destination.style.backgroundImage = 'url('+imgs[nextIndex]+')';
+destination.src = imgs[nextIndex];
 // destination.src = imgs[nextIndex];
 var href = hrefs[nextIndex];
 setTimeout(fadeimg, 4000);
 
 function showimg() {
   nextIndex = (nextIndex + 1) % imgs.length;
-  destination.style.backgroundImage = 'url('+imgs[nextIndex]+')';
+  destination.src = imgs[nextIndex];
 
 //   destination.src = imgs[nextIndex];
   href = hrefs[nextIndex];

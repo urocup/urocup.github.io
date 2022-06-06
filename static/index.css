@@ -109,17 +109,16 @@ p {
 .img {
     width: 26rem;
     height: 26rem;
-    /* border-radius: 100%; */
+    border-radius: 100%;
     border: 4px solid var(--light);
     transition: ease-in-out 2s;
-    /* margin: auto; */
 } .img img {
-
-    /* object-position: center; */
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-    /* border-radius: 100%; */
+    object-position: center;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    border-radius: 100%;
     transition: ease-in-out 2s;
 } .logo {
     margin-top: .75rem;
