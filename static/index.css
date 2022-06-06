@@ -52,11 +52,13 @@ header {
     color: var(--light);
     padding: 1.75rem;
     padding-bottom: 2.5rem;
-    transition: .25s ease-in-out;
+    transition: .35s ease-in-out;
     border-bottom: 2px solid rgba(255, 255, 255, 0);
     /* outline: 1px solid red; */
 } ul li a:hover {
-    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+    font-size: 1.4rem;
 }
 
 
@@ -122,8 +124,13 @@ cite {
     font-size: 4rem;
 } .hamburger:hover {
     color: var(--accent);
-}.mobile {top: -100%; right: 0; position: absolute;}
-
+}.mobile {top: -100%; position: absolute; width: 100%;}
+.mobile img { 
+    left: 0;
+    top: 0; 
+    margin-left: 1em;
+    margin-top: 1.5em;
+    position: absolute;}
 .img {
     width: 24rem;
     height: 24rem;
@@ -140,7 +147,7 @@ cite {
     transition: ease-in-out 2s;
 } .logo {
     margin-top: .75rem;
-    filter: grayscale(.75);
+    filter: grayscale(.45);
     height: 5rem;
     border-radius: 40px 0 40px 0;
     width: auto;
