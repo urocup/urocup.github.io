@@ -21,6 +21,19 @@
             </ul>
         </nav>
     </header>
+    <nav class="mobile">
+        <a class="hamburger" onclick="openNav()">|||</a>
+    </nav>
+    <div id="mobNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="./">Home</a>
+            <a href="./data/">Data</a>
+            <a href="./data/MASCOT.json">Download</a>
+            <a href="https://marinebiology.cofc.edu/about-the-program/faculty-listing/janech-michael.php">Contact</a>
+        </div>
+    </div>
+
     <section class="flex wrap vcenter hcenter space" style="padding-bottom: 10rem; ">
         <div class="title">
             <h2>welcome to </h2>
@@ -32,7 +45,6 @@
         </div>
         <div class="img">
             <img id="slideshow" class=""></img>
-            <!-- <img src="./static/img/cast-3.jpg" alt=""> -->
         </div>
     </section>
 
@@ -48,6 +60,6 @@
 
     </section>
 
-    <script type="text/javascript" src="./slideshow.js"></script>
+    <script type="text/javascript" src="./static/scripts.js"></script>
 </body>
 </html>
