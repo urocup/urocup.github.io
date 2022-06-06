@@ -1,0 +1,298 @@
+:root {
+    --light: rgb(255, 255, 255);
+    --dark: rgb(0,0,0);
+    --accent: rgb(67, 29, 29);
+
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(118, 185, 248);
+    background: linear-gradient(160deg, rgb(165, 211, 255) 0%, rgb(121, 161, 183) 45%, rgba(84,77,106,1) 100%); 
+    color: var(--light);
+    font-family: var(--ff-sans-normal);
+    min-height: 100vh;
+}
+
+header {
+    padding: 2rem 0 6rem 2rem;
+} header::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 2px;
+    width: 100%;
+    float: right;
+    margin-right: 38rem;
+    margin-top: -3rem;
+    background: rgba(255,255,255,.5);
+    order: 1;
+    z-index: 1;
+} nav {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-family: "Barlow Condensed";
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+} ul {
+    list-style: none;
+    background-color: rgba(255,255,255,.1);
+    padding: 2rem 6rem 2rem 6rem;
+} ul li a {
+    text-decoration: none;
+    color: var(--light);
+    padding: 1.75rem;
+    padding-bottom: 2.5rem;
+    transition: .25s ease-in-out;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    /* outline: 1px solid red; */
+} ul li a:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+
+h1,h2,h3 {
+    text-transform: uppercase;
+}
+h1{
+    font-family: var(--ff-serif);
+    font-weight: 100;
+    font-size: 10rem;
+    letter-spacing: 3px;
+    margin-left: -.75rem;
+}h2{
+    font-family: var(--ff-sans-cond);
+    font-weight: 300;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+}h3{
+    font-family: var(--ff-sans-cond);
+    font-weight: 200;
+}
+
+p {
+    max-width: 500px;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}.wrap {
+    flex-wrap: wrap;
+}.vcenter {
+    align-items: center;
+}.hcenter {
+    justify-content: center;
+}
+.tcenter{
+    text-align: center;
+} .space > * {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.title {
+    width: fit-content;
+}
+
+.img {
+    width: 26rem;
+    height: 26rem;
+    /* border-radius: 100%; */
+    border: 4px solid var(--light);
+    transition: ease-in-out 2s;
+    /* margin: auto; */
+} .img img {
+
+    /* object-position: center; */
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    /* border-radius: 100%; */
+    transition: ease-in-out 2s;
+} .logo {
+    margin-top: .75rem;
+    filter: grayscale(.75);
+    height: 5rem;
+    border-radius: 40px 0 40px 0;
+    width: auto;
+    z-index: 2;
+    border: 3px solid rgba(80, 128, 151, 0.068);
+}
+
+.banner {
+    justify-content: center;
+    gap: 2em;
+}.banner img {
+    height: 6.5em;
+    max-width: 225px;
+    object-fit:scale-down;
+}
+
+/* Select Table Styling */
+.radio-button {
+    margin-left: 4rem;
+    margin-bottom: .5rem;
+    width: fit-content;
+    font-family: "Barlow Condensed";
+    font-size: 1.25rem;
+
+}
+.radio-button input[type="radio"] {
+    display: none;
+    
+  }      
+  .radio-button label {
+
+    /* transition: .1s ease-in-out; */
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: var(--accent);
+    color: white;
+    padding: 4px 11px;
+    cursor: pointer;
+    margin-right: .5rem;
+  }      
+  .radio-button input[type="radio"]:checked+label {
+    background-color: var(--accent);
+    color: white;
+  }
+  .radio-button input[type="radio"]:hover+label {
+      /* transition: .1s ease-in-out; */
+      outline: 2px solid white;
+    /* background-color: rgb(255, 255, 255);
+    color: black; */
+  }
+
+
+/* Table Styling */
+.dataTables_wrapper {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+/* .dataTables_wrapper:not(first-child),.dataTables_wrapper:not(:last-child) {
+    width: 100%;
+    overflow-x: scroll;
+} */
+
+.dataTables_wrapper .row {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+/* Search/Show Styles */
+.dataTables_wrapper > div:first-child {
+    padding: 0 .5rem 0 .5rem;
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 1px;
+    background-color: rgba(255, 255, 255, .125);
+}.dataTables_wrapper > div:first-child > * {
+    /* outline: 2px solid green; */
+    font-size: 1.25rem;
+    padding: .25rem 0 .5rem 0;
+    text-transform: uppercase;
+    font-family: "Barlow Condensed";
+}.dataTables_wrapper input,select {
+    border: unset;
+    /* outline: 1px solid green; */
+    background-color: white;
+    /* border: .5rem solid rgba(255, 255, 255, .1); */
+    outline: 2px solid rgba(255, 255, 255, 0.171);
+    border: .375rem solid white;
+    border-radius: 15px;
+}
+.dataTables_filter {
+    text-align: left !important;
+}
+
+/* Table Data Styles */
+thead {
+    text-transform: uppercase;
+    font-family: "Barlow Condensed";
+    color: rgb(255, 255, 255);
+    background-color: var(--accent);
+} tbody .even {
+    background-color: rgba(0, 0, 0, 0.171);    transition: .25s ease;
+} tbody .odd {
+    background-color: rgba(136, 136, 136, 0.171);    transition: .25s ease;
+} tbody tr {
+    text-align: center;
+}
+tbody tr:hover{
+    background-color: var(--accent);
+} tbody td a {
+    color: white;
+    margin-left: .25rem;
+    margin-right: .25rem;
+
+}
+
+
+
+
+
+
+/* Pagination Styles */
+.dataTables_wrapper > div:last-child {
+    /* outline: 2px solid red; */
+    width: fit-content;
+    overflow: hidden;
+    font-size: 1.25rem;
+    padding: .25rem 0 .5rem 0;
+    text-transform: uppercase;
+    font-family: "Barlow Condensed";
+}
+.pagination {
+    background-color:unset;
+    padding: 0;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    display: flex;
+}.pagination a {
+    padding: 1rem;
+    margin-right: .5rem;
+    background-color: rgba(255, 255, 255, .1);
+    color: white;
+    overflow: hidden;
+    border-radius: 1px;
+}.pagination .active > a {
+    background-color: rgba(255, 255, 255, .5);
+
+}
+
+.debug {
+    outline: 1px solid red;
+}
+
+@media (max-width: 1268px) {
+
+    * {
+        text-align: center;
+        margin: auto;
+    }
+
+    header::after {
+        width: 0;
+    }
+    .desktop{ width: 0; overflow: hidden;}
+    .radio-button{margin: auto; margin-bottom: .5rem;}
+} 
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 4rem;
+    }
+} 
